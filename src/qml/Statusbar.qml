@@ -32,8 +32,7 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.0
 import QtQuick.Controls.Nemo 1.0
 import QtQuick.Controls.Styles.Nemo 1.0
-import org.freedesktop.contextkit 1.0
-import MeeGo.Connman 0.2
+//import org.freedesktop.contextkit 1.0
 
 Item {
     id: root
@@ -50,7 +49,7 @@ Item {
         z: 200
     }
 
-    ContextProperty {
+/*    ContextProperty {
         id: batteryChargePercentage
         key: "Battery.ChargePercentage"
         value: "100"
@@ -100,7 +99,7 @@ Item {
             if (powered)
                 wifimodel.requestScan()
         }
-    }
+    }*/
 
     Loader {
         id: panel_loader
@@ -139,7 +138,7 @@ Item {
                     return techToG[cellularDataTechnology.value ? cellularDataTechnology.value : "unknown"] + "G"
                 }
             }
-            panel: SimPanel {}
+//            panel: SimPanel {}
         }
 
         StatusbarItem {
